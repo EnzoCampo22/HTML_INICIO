@@ -8,3 +8,23 @@ document.getElementById("sumar").addEventListener('click', function(){
 
 
 })
+{
+
+var x = document.getElementById("pruebalocalizacion")
+
+function getLocation(){
+    if (navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(showPosition);
+    }else{
+        x.innerHTML = "el servicio de geolocalizacion no está permitida en este navegador"
+    }
+    
+}
+
+function showPosition(position){
+    x.innerHTML = "latitud: " + position.coords.latitude + "<br>Longitud: " + position.coords.longitude;
+}
+
+
+
+}

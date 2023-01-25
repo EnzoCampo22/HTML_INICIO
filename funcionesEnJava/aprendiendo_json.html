@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>nombre</label>
+        <div id="nombre"></div>
+        <label>edad</label>
+        <div id="edad"></div>
+        <script>
+            let Enzo = '{"nombre": "Enzo Gregorio Campo ", "edad": 31,"nacionalidad": "Argentina"}'
+            let objEnzo = JSON.parse(Enzo);
+            document.getElementById("nombre").innerHTML = objEnzo.nombre
+            document.getElementById("edad").innerHTML = objEnzo.edad
+    
+        </script>
+    </form>
+
+</body>
+</html>
